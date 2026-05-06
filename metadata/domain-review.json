@@ -1,0 +1,73 @@
+{
+  "repo": "drift-model-explain-grid",
+  "language": "Haskell",
+  "category": "ML utilities",
+  "goal": "Create a Haskell reference implementation for explain workflows, centered on visual model generation, layout fixtures, and stable geometry snapshots.",
+  "review_model": {
+    "terms": [
+      "feature drift",
+      "window width",
+      "metric stability",
+      "explainability"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "feature drift",
+      "signal": 73,
+      "slack": 40,
+      "drag": 10,
+      "confidence": 53,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "window width",
+      "signal": 77,
+      "slack": 54,
+      "drag": 24,
+      "confidence": 84,
+      "score": 220,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "metric stability",
+      "signal": 75,
+      "slack": 28,
+      "drag": 30,
+      "confidence": 92,
+      "score": 180,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "explainability",
+      "signal": 68,
+      "slack": 51,
+      "drag": 14,
+      "confidence": 94,
+      "score": 239,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "feature drift",
+      "signal": 54,
+      "slack": 37,
+      "drag": 31,
+      "confidence": 57,
+      "score": 109,
+      "lane": "watch"
+    }
+  ]
+}
